@@ -93,4 +93,5 @@ reset.onclick = function () {
     minutes.innerHTML = "00";
     hourCounter = 0;
     hours.innerHTML = "00";
+    preventStartSpam = false;
 }

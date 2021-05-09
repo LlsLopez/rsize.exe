@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,6 +54,31 @@
         <div class = "selections" id = s15>selection 15</div>
         <div class = "selections" id = s16>selection 16</div>
     </div>
+
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyACsCIDBrt8U6cKS4CesFYt_K8mKGT7jpo",
+    authDomain: "rsizeexe.firebaseapp.com",
+    projectId: "rsizeexe",
+    storageBucket: "rsizeexe.appspot.com",
+    messagingSenderId: "396289267529",
+    appId: "1:396289267529:web:9f742e347f7aa11ab32c98",
+    measurementId: "G-0DSFT1TJJ0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+  db.settings({timestampsInSnapshots: true});
+</script>
 </body>
 
 
