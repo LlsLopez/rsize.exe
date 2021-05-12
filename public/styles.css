@@ -83,3 +83,14 @@ ul {
   background-color:rgb(145, 240, 145);
   font-size:20px;
 }
+#status_line{
+  font-size:30px;
+  color:rgb(102, 2, 2);
+  text-align:center;
+}
+#status{
+  display: inline-block;
+}
+#status_details{
+  display: inline-block;
+}

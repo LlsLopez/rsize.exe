@@ -78,6 +78,7 @@ start.onclick = function ()
     interval = setInterval(startStopWatch,10);
     preventStartSpam = true;
     }
+    console.log(choices1);
 }
 stop.onclick = function () {
     clearInterval(interval);

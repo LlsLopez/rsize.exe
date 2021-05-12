@@ -1,3 +1,4 @@
+/*
 var s1 = document.getElementById("s1");
 var s2 = document.getElementById("s2");
 var s3 = document.getElementById("s3");
@@ -38,6 +39,51 @@ s13.innerHTML = exercises[pageNum * 16 + 13];
 s14.innerHTML = exercises[pageNum * 16 + 14];
 s15.innerHTML = exercises[pageNum * 16 + 15];
 s16.innerHTML = exercises[pageNum * 16 + 16];
+*/
+
+const selectContainer = document.querySelector("#c2");
+sChoice = "Core"; // test example , replace w/ selection box
+let choices1 = [];
+function fillSelections(doc)
+{
+    let choice = document.createElement('span');
+
+    let name = document.createElement('span');
+
+    choice.setAttribute("dataId",doc.id);
+    name.textContent = doc.data().name;
+
+    choice.appendChild(name);
+
+    selectContainer.appendChild(choice);
+
+    name.addEventListener('click',(event) => {
+        event.stopPropagation();
+        console.log(name.textContent);
+        choices1.push(name.textContent);
+        console.log(choices1);
+
+        document.getElementById("status_details").innerHTML ="added " + name.textContent;
+    })
+
+
+
+}
+
+
+
+db.collection('Exercises').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+
+        if(sChoice == doc.data().type)
+        {
+            fillSelections(doc);
+        }
+
+    })
+} );
+
+
 
 
 
